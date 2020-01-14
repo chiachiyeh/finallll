@@ -4,8 +4,9 @@ import sys
 split = 5000
 
 def load_objects():
-    img = np.load('data/trainX.npy')
-    label = np.load('data/trainY.npy')
+    print('hi here')
+    img = np.load('drive/My Drive/Colab Notebooks/ML/Final/finallll/src/datasets/trainX.npy')
+    label = np.load('drive/My Drive/Colab Notebooks/ML/Final/finallll/src/datasets/trainY.npy')
 
     train_img = img[:split]
     train_label = label[:split]
@@ -16,8 +17,8 @@ def load_objects():
 
     return train_img, train_label, test_img, test_label
 def load_mnist_style_objects():
-    img = np.load('data/testX.npy')
-    label = np.load('data/dummy_testY.npy') #all_zero dummy label
+    img = np.load('drive/My Drive/Colab Notebooks/ML/Final/finallll/src/datasets/testX.npy')
+    label = np.load('drive/My Drive/Colab Notebooks/ML/Final/finallll/src/datasets/dummy_testY.npy') #all_zero dummy label
     img = img.reshape(img.shape[0],img.shape[1],img.shape[2])
     print('target img shape : ',img.shape)
     print('target label (dummy) shape : ', label.shape)
